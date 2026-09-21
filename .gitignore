@@ -1,0 +1,19 @@
+# competition data (not redistributable)
+Train/
+Test/
+*.zip
+
+# model artefacts / run outputs
+*.pt
+*.ckpt
+*.npy
+*.npz
+!weights/*.joblib
+lfm_repo/
+lfm_weights/
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+archive/

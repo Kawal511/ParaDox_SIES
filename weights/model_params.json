@@ -1,0 +1,49 @@
+{
+  "name": "pareidolia-labelshift-v1",
+  "type": "transductive azimuth-density prior",
+  "inputs": [
+    "sun_azimuth_angle (train, with labels)",
+    "sun_azimuth_angle (evaluation, unlabeled)"
+  ],
+  "bin_width_deg": 30,
+  "n_bins": 12,
+  "fit": {
+    "form": "depth_rate = slope * relative_bin_density + intercept",
+    "slope": 0.33718518294295496,
+    "intercept": -0.21051817974521125
+  },
+  "decision_cutoff": 0.37488384207563497,
+  "train_depth_rate_per_bin": [
+    0.1145,
+    0.1354,
+    0.1076,
+    0.1148,
+    0.1242,
+    0.1138,
+    0.101,
+    0.1178,
+    0.1407,
+    0.6487,
+    0.6417,
+    0.648
+  ],
+  "train_relative_density_per_bin": [
+    0.9488,
+    0.9572,
+    0.9906,
+    0.9467,
+    1.0094,
+    1.0282,
+    1.0136,
+    0.9404,
+    0.9655,
+    2.5643,
+    2.5078,
+    2.5413
+  ],
+  "fitted_on": {
+    "n_train": 7854,
+    "n_eval": 2000
+  },
+  "reproduce": "python scripts/make_submission.py"
+}
